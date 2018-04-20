@@ -1,4 +1,3 @@
-package blatt1;
 
 public class Labyrinth {
 
@@ -43,10 +42,6 @@ public class Labyrinth {
       pos = newPos;
       if (pos[0] == 1 && pos[1] == 0) {
         System.err.println("ERROR: The exit is unreachable by the RHR!");
-        try {
-          Thread.sleep(1000);
-        } catch (InterruptedException e) {
-        }
         return;
       }
     }
@@ -56,10 +51,6 @@ public class Labyrinth {
   private static void draw(int[] pos) {
     solution[pos[0]][pos[1]] = true;
     Maze.draw(pos[0], pos[1], maze, solution);
-    try {
-      Thread.sleep(20);
-    } catch (InterruptedException e) {
-    }
   }
 
 
