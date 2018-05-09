@@ -1,4 +1,6 @@
+package blatt4;
 /**
+ *
  * Die Klasse DHT (distributed hash table) stellt eine vereinfachte
  * verteilte Hash Tabelle dar. Sie wird (um die Aufgabe zu simplifizieren)
  * nicht für die Speicherung der Daten verwendet sondern kümmert sich
