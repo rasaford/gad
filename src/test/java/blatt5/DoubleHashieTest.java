@@ -1,42 +1,47 @@
-import static org.junit.Assert.*;
+package blatt5;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Hashtable;
 import java.util.Iterator;
-import java.util.Random;
 import java.util.Map.Entry;
 import java.util.Optional;
-
+import java.util.Random;
 import org.junit.Test;
 
 public class DoubleHashieTest {
 
-  @Test public void testInt () {
-    DoubleHashTable<Integer, Integer> ht = new DoubleHashTable<>(997, new IntHashableFactory());
-    
+  @Test
+  public void testInt() {
+    DoubleHashTable<Integer, Integer> ht = new DoubleHashTable<>(5347, new IntHashableFactory());
+
     Hashtable<Integer, Integer> htJava = new Hashtable<>();
-    
+
     Random r = new Random();
-    
-    for(int i = 0; i < 500; i++) {
+
+    for (int i = 0; i < 5000; i++) {
       int key = r.nextInt(Integer.MAX_VALUE);
-      while(htJava.contains(key))
+      while (htJava.contains(key)) {
         key = r.nextInt(Integer.MAX_VALUE);
+      }
       int value = r.nextInt(Integer.MAX_VALUE);
-      
-      assertTrue("Unable to insert :-/", ht.insert(key, value));
+
+      assertTrue(ht.insert(key, value), String.format("unable to insert {%d,%d}", key, value));
       htJava.put(key, value);
     }
-    
+
     Iterator<Entry<Integer, Integer>> it = htJava.entrySet().iterator();
-    while(it.hasNext()) {
+    while (it.hasNext()) {
       Entry<Integer, Integer> entry = it.next();
       assertEquals(entry.getValue(), ht.find(entry.getKey()).get());
     }
   }
-  
-  @Test public void testString() {
+
+  @Test
+  public void testString() {
     DoubleHashTable<String, Integer> ht = new DoubleHashTable<>(997, new StringHashableFactory());
-    
+
     assertTrue(ht.insert("Hugo", 99));
     assertTrue(ht.insert("Inge", 22));
     assertTrue(ht.insert("Egon", 100));

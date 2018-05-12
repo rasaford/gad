@@ -1,3 +1,5 @@
+package blatt5;
+
 
 public class IntHashableFactory implements HashableFactory<Integer> {
 

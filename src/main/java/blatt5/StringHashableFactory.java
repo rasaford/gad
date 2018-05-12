@@ -1,3 +1,4 @@
+package blatt5;
 
 public class StringHashableFactory implements HashableFactory<String> {
 
