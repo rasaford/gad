@@ -1,3 +1,5 @@
+package blatt7;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -22,7 +24,7 @@ public class RadixchenTest {
 
 //  @Test
 //  public void testKey() {
-//    RadixSort r = new RadixSort();
+//    blatt7.RadixSort r = new blatt7.RadixSort();
 //    assertEquals(1, r.key(1234, 0));
 //    assertEquals(2, r.key(1234, 1));
 //    assertEquals(3, r.key(1234, 2));
@@ -37,7 +39,7 @@ public class RadixchenTest {
 //    };
 //    Integer[] sorted = new Integer[]{11, 12, 13, 15, 22, 25};
 //    Integer[] res = new Integer[6];
-//    RadixSort r = new RadixSort();
+//    blatt7.RadixSort r = new blatt7.RadixSort();
 //    r.concatenate(buckets, res);
 //    assertArrayEquals(sorted, res, String.format("arrays are not the same %s != %s",
 //        Arrays.toString(sorted),
@@ -53,7 +55,7 @@ public class RadixchenTest {
 //    }
 //    Integer[] radixSorted = new Integer[numbers.length];
 //    System.arraycopy(numbers, 0, radixSorted, 0, numbers.length);
-//    RadixSort r = new RadixSort();
+//    blatt7.RadixSort r = new blatt7.RadixSort();
 //    r.sort(radixSorted);
 //    Arrays.sort(numbers);
 //    Assertions.assertArrayEquals(numbers, radixSorted, String.format("arrays are not equal %s != %s",

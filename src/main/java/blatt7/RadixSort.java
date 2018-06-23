@@ -1,3 +1,5 @@
+package blatt7;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 

@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
+import blatt8.BinomialHeap;
 import java.util.Arrays;
 import java.util.Random;
 import org.junit.Test;
