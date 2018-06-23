@@ -3,14 +3,38 @@ package blatt5;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.Random;
+import java.util.Set;
 import org.junit.Test;
 
 public class DoubleHashieTest {
+
+
+  @Test
+  public void testHashTick() {
+    final int size = 255;
+    DoubleHashable h = new DoubleHashInt(size);
+    Set<Integer> keys = new HashSet<>();
+    Set<Long> hashes = new HashSet<>();
+    Random r = new Random();
+
+    while (keys.size() != 100) {
+      keys.add(r.nextInt(Integer.MAX_VALUE));
+    }
+
+    for (int key : keys) {
+      for (int i = 0; i < 10; i++) {
+        long hash = (h.hash(key) + i * h.hashTick(key)) % size;
+        assertTrue(hashes.add(hash));
+      }
+      hashes.clear();
+    }
+  }
 
   @Test
   public void testInt() {
