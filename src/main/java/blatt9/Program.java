@@ -1,3 +1,4 @@
+package blatt9;
 
 import java.util.Scanner;
 

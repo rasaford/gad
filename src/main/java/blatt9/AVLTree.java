@@ -1,3 +1,4 @@
+package blatt9;
 
 /**
  * Diese Klasse implementiert einen AVL-Baum.
@@ -9,7 +10,7 @@ public class AVLTree {
    */
   private AVLTreeNode root;
 
-//  public AVLTree() {
+//  public blatt9.AVLTree() {
 //
 //  }
 
