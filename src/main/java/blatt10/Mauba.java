@@ -1,3 +1,5 @@
+package blatt10;
+
 import java.util.Scanner;
 
 public class Mauba {
